@@ -1,0 +1,70 @@
+#seccion_1 {
+    background-color: #F2C1AE;
+}
+
+.carousel img {
+    width: 100%;
+    
+}
+.carousel {
+    display: flex;
+}
+
+.cabezal {
+    display: flex;
+    justify-content: center;
+}
+
+.cabezal li {
+    display: inline;
+    cursor: pointer;
+}
+
+.slide.active svg circle{
+    fill: #F28888;
+}
+
+.slide svg circle {
+    fill: #F2C1AE;
+}
+
+#izquierda {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    z-index: 1;
+    color: #F2F2F2;
+    font-size: 2em;
+    align-self: center;
+    margin-left: 0px;
+    cursor: pointer;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 15px;
+    padding-left: 5px;
+}
+
+#derecha {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    z-index: 1;
+    color: #F2F2F2;
+    font-size: 2em;
+    align-self: center;
+    margin-left: calc(100% - 40px);
+    cursor: pointer;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 5px;
+    padding-left: 15px;
+}
+
+#izquierda:hover {
+    background-color: #f2f2f234;
+}
+
+#derecha:hover {
+    background-color: #f2f2f234;
+}
+

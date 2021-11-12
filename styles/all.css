@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+html {
+    background-color: #F2F2F2;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.redes-sociales {
+    /* Dimensiones */
+    height: 25px; /* En mi pantalla 1cm es aprox 30cm */
+    background-color: #F2F2F2;
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    color: black;
+    padding: 2px;
+}
+
+.redes-sociales .container {
+    /*Dimensiones*/
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    top: 2px;
+    right: 75px;
+}
+
+
+
+
+
+.menu-nav {
+/*dimensiones*/
+width: auto;
+    height: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #D9946C;
+    align-content: flex-end;
+    justify-content: center;
+    /* border design */
+    border-bottom: 5px solid #BF5E49;
+}
+
+.menu-nav .menu-pestanas {
+    /*dimensiones*/
+    width: max-content;
+    height: max-content;
+
+    /*flex-design*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-nav .menu-pestanas a {
+    
+    /*box design*/
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 14px;
+
+    /*text design*/
+    text-decoration: none;
+    font-size: 1em;
+
+    color: #f5eeee;
+    
+
+}
+
+#menu-bars {
+    display: none;
+}
+
+.menu-nav .menu-pestanas a:hover {
+    background-color: #BF5E49;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-nav {
+        /*dimensiones*/
+        width: auto;
+        height: 55px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #D9946C;
+        align-content: flex-end;
+        justify-content:end;
+        /* border design */
+        border-bottom: 5px solid #BF5E49;
+        }
+    .menu-nav .menu-pestanas {
+        /*dimensiones*/
+        width: max-content;
+        height: max-content;
+        
+        /*flex-design*/
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+    }
+    .menu-nav .menu-pestanas a {
+        display: none;
+        width: 100vw;
+        /*box design*/
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 14px;
+    
+        /*text design*/
+        text-decoration: none;
+        font-size: 1em;
+    
+        color: #f5eeee;
+    }
+    #menu-bars {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        color: #f5eeee;
+        padding-bottom: 15px;
+        font-size: 1.4em;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .menu-pestanas a.mostrar {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-nav.mostrar {
+        height: 275px;
+    }
+}
+

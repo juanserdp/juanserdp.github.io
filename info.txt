@@ -1,0 +1,14 @@
+Paleta de colores:
+https://color.adobe.com/es/search?q=spa
+
+colores:
+
+blanco: #F2F2F2
+
+marroncito: #D9946C
+
+color piel: #F2C1AE
+
+color cuero rojo: #BF5E49
+
+rosadito: #F28888
