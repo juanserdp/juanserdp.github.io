@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Paola Picon Spa</title>
+
+    <!--Metadata-->
+    <meta name="author" content="Diana Paola Picon">
+    <meta name="description" content="Spa en bucaramanga">
+    <meta name="keywords" content="spa bucaramanga belleza relajacion masajes floridablanca limpieza facial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <!-- Icono -->
+    <link rel="icon" type="image/png" href="./images/icono.png" />
+
+    <!--Enlaces-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/all.css" type="text/css">
+    <link rel="stylesheet" href="styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="styles/carousel.css" type="text/css">
+    <link rel="stylesheet" href="styles/seccion2.css" type="text/css">
+    <link rel="stylesheet" href="styles/seccion3.css" type="text/css">
+    <link rel="stylesheet" href="styles/footer.css" type="text/css">
+    <!-- Compiled and minified CSS -->
+
+    <!-- Compiled and minified JavaScript -->
+
+
+</head>
+
+<body>
+    <!--Encabezado-->
+    <header>
+        <!-- <div class="menu-nav-logo">
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
+            </div> -->
+        <!-- Redes sociales -->
+        <div class="redes-sociales">
+            <div class="container">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="http://instragram.com"><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <nav class="menu-nav" id="menu-nav">
+            <div class="menu-pestanas">
+                <div id="menu-bars" onclick="desplegarMenu()"><i class="fas fa-bars"></i></div>
+                <a class="menu-pestanas-pestana" href="">NOSOTROS</a>
+                <a class="menu-pestanas-pestana" href="">CONTACTO</a>
+                <a class="menu-pestanas-pestana" href="">BELLEZA</a>
+                <a class="menu-pestanas-pestana" href="">RELAJACION</a>
+                <a class="menu-pestanas-pestana" href="">FACIAL</a>
+                <a class="menu-pestanas-pestana" href="">CORPORAL</a>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <!--Seccion 1: carrusel-->
+    <section id="seccion_1">
+        <div class="carousel">
+            <div class="item" id="item">
+                <img id="imagen" src="./images/publicidad1.jpg" alt="">
+            </div>
+            <div id="izquierda" onclick="flechas(this)" data-direccion="izquierda"><i   class="fas fa-chevron-left"></i></div>
+            <div id="derecha" onclick="flechas(this)" data-direccion="derecha"><i  class="fas fa-chevron-right"></i></div>
+            
+        </div>
+        <br>
+
+        <div class="cabezal">
+            <ol>
+                <li onclick="slide(this)" class="slide active" data-slide-to="1">
+                    <svg width="10" height="10">
+                        <circle cx="5" cy="5" r="4" stroke="#F28888" stroke-width="1" fill="#F28888" />
+                    </svg>
+                </li>
+                <li onclick="slide(this)" class="slide" data-slide-to="2">
+                    <svg width="10" height="10">
+                        <circle cx="5" cy="5" r="4" stroke="#F28888" stroke-width="1" fill="#F2C1AE" />
+                    </svg>
+                </li>
+                <li onclick="slide(this)" class="slide" data-slide-to="3">
+                    <svg width="10" height="10">
+                        <circle cx="5" cy="5" r="4" stroke="#F28888" stroke-width="1" fill="#F2C1AE" />
+                    </svg>
+                </li>
+                <li onclick="slide(this)" class="slide" data-slide-to="4">
+                    <svg width="10" height="10">
+                        <circle cx="5" cy="5" r="4" stroke="#F28888" stroke-width="1" fill="#F2C1AE" />
+                    </svg>
+                </li>
+                <li onclick="slide(this)" class="slide" data-slide-to="5">
+                    <svg width="10" height="10">
+                        <circle cx="5" cy="5" r="4" stroke="#F28888" stroke-width="1" fill="#F2C1AE" />
+                    </svg>
+                </li>
+            </ol>
+        </div>
+        <br>
+    </section>
+
+    <!--Seccion 2: mensaje breve-->
+    <section class="seccion2">
+        <div class="contenedor-videos">
+            <div class="video-1">
+                <video class="video" src="./videos/surcosCorrecio.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-2">
+                <video class="video" src="./videos/hidroFlash.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-3">
+                <video class="video" src="./videos/gluteos.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+        <br>
+        <div class="presentacion">
+            <h1>Paola Picon Spa</h1>
+            <br>
+            <p>Paola Spa es un centro de estética de Bucaramanga,
+                que se ha caracterizado por brindar uno de los
+                mejores tratamientos terapéuticos y medicinales
+                de relajación antiestrés. Brindando también tratamientos
+                del cuidado de la piel con productos de la mejor calidad.</p>
+        </div>
+    </section>
+
+    <!--Seccion 3: videos-->
+    <section class="seccion3">
+        <div class="contenedor">
+            <div class="paola">
+                <h3>PAOLA PICON SPA</h3>
+                <br>
+                <p>Centro terapéutico
+                    medicinal de Bucaramanga/
+                    Encuentra planes medicinales
+                    de relajación y anti estrés/
+                    Cuidado de la piel/
+                    Tratamientos reductores.</p>
+            </div>
+            <div class="telefonos">
+                <h3>LINEAS DE ATENCION</h3>
+                <br>
+                <p>3175027334</p>
+                <p>3154614520</p>
+                <p>6187373</p>
+            </div>
+            <div class="direccion">
+                <h3>DIRECCION</h3>
+                <br>
+                <p>CRA 8 # 8 - 23</p>
+                <p>Edificio Villa Amparo</p>
+                <p>Torre 2 Apto 504</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Pie de pagina-->
+    <footer class="footer">
+        <span>
+            Copyright © 2021 Paola Picon Spa | Sitio hecho por
+            <a href="https://www.facebook.com/sebastian.rroclriguez">Sebastian Rodriguez Picon</a>
+        </span>
+    </footer>
+    <!--Scripts-->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="https://kit.fontawesome.com/db418275fc.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
