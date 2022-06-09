@@ -392,7 +392,7 @@ img{
 
 
 .skills__container{
-    grid-template-columns: var(--columnas);
+    grid-template-columns: var(--columnas) !important;
     gap: 1rem;
 }
 
