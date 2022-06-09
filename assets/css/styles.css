@@ -35,7 +35,7 @@
     --mitad-pantalla: 50%;
     --mitad-navegador: 150px;
     --centro: calc(var(--mitad-pantalla) - var(--mitad-navegador));
-    
+    --columnas: repeat(2, 1fr);
 }
 
 @media screen and (min-width: 968px){
@@ -47,6 +47,11 @@
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
+    }
+}
+@media screen and (max-width: 500px){
+    :root{
+        --columnas: repeat(1, 1fr);
     }
 }
 
@@ -348,6 +353,7 @@ img{
 
 .about__data{
     text-align: center;
+
 }
 
 .about__info{
@@ -355,6 +361,7 @@ img{
     grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
     margin-bottom: 2rem;
+    
 }
 
 .about__box{
@@ -383,16 +390,16 @@ img{
 
 /* SKILLS */
 
+
 .skills__container{
-    row-gap: 2rem;
-    padding-top: 1rem;
+    grid-template-columns: var(--columnas);
+    gap: 1rem;
 }
 
 .skills__content{
     background-color: var(--container-color);
-    padding: 1.5rem;
+    padding: 0.5rem;
     border-radius: 1.25rem;
-    margin: auto;
 }
 
 .skills__title{
@@ -406,8 +413,6 @@ img{
 .skills__box{
     display: flex;
     justify-content: center;
-    column-gap: 2.5rem;
-    
 }
 
 .skills__group{
@@ -440,7 +445,7 @@ img{
 /* servicios */
 
 .services__container{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: var(--columnas);
     gap: 1.5rem;
     padding-top: 1rem;
 }
@@ -454,7 +459,7 @@ img{
 
 
 .services__title{
-    font-size: var(--h3-font-size);
+    font-size: var(--h1-font-size);
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
     text-align: center;
@@ -551,7 +556,7 @@ img{
 }
 
 .work__container{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: var(--columnas);
     gap: 1.5rem;
     padding-top: 1rem;
 }
@@ -642,8 +647,8 @@ img{
 
 .contact__container{
     row-gap: 3rem;
+    grid-template-columns: var(--columnas);
     padding-bottom: 3rem;
-    display: inline-flex
 }
 
 .contact__title{
