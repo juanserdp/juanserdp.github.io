@@ -17,7 +17,9 @@
     <!--Enlaces-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -50,14 +52,16 @@
         </div>
 
         <nav class="menu-nav" id="menu-nav">
+            <img id="icono_principal" src="./images/icono.png" />
+            
             <div class="menu-pestanas">
                 <div id="menu-bars" onclick="desplegarMenu()"><i class="fas fa-bars"></i></div>
                 <a class="menu-pestanas-pestana" href="">NOSOTROS</a>
-                <a class="menu-pestanas-pestana" href="">CONTACTO</a>
+                <a class="menu-pestanas-pestana" href="">CORPORAL</a>
                 <a class="menu-pestanas-pestana" href="">BELLEZA</a>
                 <a class="menu-pestanas-pestana" href="">RELAJACION</a>
                 <a class="menu-pestanas-pestana" href="">FACIAL</a>
-                <a class="menu-pestanas-pestana" href="">CORPORAL</a>
+                <a class="menu-pestanas-pestana" href="">CONTACTO</a>
             </div>
         </nav>
         </div>
@@ -69,6 +73,7 @@
             <div class="item" id="item">
                 <img id="imagen" src="./images/publicidad1.jpg" alt="">
             </div>
+            <div id="titulo_principal">Bienvenidos a Mundo Belleza Glamour</div>
             <div id="izquierda" onclick="flechas(this)" data-direccion="izquierda"><i   class="fas fa-chevron-left"></i></div>
             <div id="derecha" onclick="flechas(this)" data-direccion="derecha"><i  class="fas fa-chevron-right"></i></div>
             
@@ -106,7 +111,7 @@
         </div>
         <br>
     </section>
-
+    
     <!--Seccion 2: mensaje breve-->
     <section class="seccion2">
         <div class="contenedor-videos">
@@ -119,9 +124,18 @@
             <div class="video-3">
                 <video class="video" src="./videos/gluteos.mp4" autoplay muted loop></video>
             </div>
+            <div class="video-1">
+                <video class="video" src="./videos/surcosCorrecio.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-2">
+                <video class="video" src="./videos/hidroFlash.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-3">
+                <video class="video" src="./videos/gluteos.mp4" autoplay muted loop></video>
+            </div>
         </div>
         <br>
-        <div class="presentacion">
+        <!-- <div class="presentacion">
             <h1>Paola Picon Spa</h1>
             <br>
             <p>Paola Spa es un centro de estética de Bucaramanga,
@@ -129,7 +143,7 @@
                 mejores tratamientos terapéuticos y medicinales
                 de relajación antiestrés. Brindando también tratamientos
                 del cuidado de la piel con productos de la mejor calidad.</p>
-        </div>
+        </div> -->
     </section>
 
     <!--Seccion 3: videos-->

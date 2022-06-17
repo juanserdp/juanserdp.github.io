@@ -38,6 +38,12 @@ li a {
 
 
 
+#icono_principal {
+    width: 40px;
+    height: 40px;
+}
+
+
 
 .menu-nav {
 /*dimensiones*/
@@ -50,6 +56,7 @@ width: auto;
     justify-content: center;
     /* border design */
     border-bottom: 5px solid #BF5E49;
+    font-weight: 300;
 }
 
 .menu-nav .menu-pestanas {
@@ -85,7 +92,11 @@ width: auto;
 }
 
 .menu-nav .menu-pestanas a:hover {
+
     background-color: #BF5E49;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 #logo {

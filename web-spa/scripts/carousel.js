@@ -22,7 +22,7 @@ function slide(slide) {
     activar(numeroSlide, slide);
 }
 
-function repeticion() {
+function repeticion(tiempo) {
     for (let i = 1; i <= 5; i++) {
         setTimeout(
             () => {
@@ -30,7 +30,7 @@ function repeticion() {
                 let slideActual = document.querySelectorAll(".active");
 
                 // con esto tengo el indice de la slide actual
-                let numeroSlide = parseInt(slideActual[0].getAttribute("data-slide-to"),10);
+                let numeroSlide = parseInt(slideActual[0].getAttribute("data-slide-to"), 10);
 
                 // remover el active de la slide actual
                 slideActual[0].classList.remove("active");
@@ -38,20 +38,20 @@ function repeticion() {
                 // con esto tengo todas las slide
                 let slides = document.querySelectorAll(".slide");
 
-                
+
 
                 //alert("entro ")
                 // si numeroSlide es 5 se reinicia el contador a cero sino le suma 1
-                if (numeroSlide === 1){
+                if (numeroSlide === 1) {
                     // selecciono la siguiente slide
                     let slideSiguiente = slides[numeroSlide];
-                    
+
                     // llenar circulo
                     slideSiguiente.classList.add("active");
 
                     // con el numero buscar la imagen
                     let imagen = document.getElementById("imagen");
-                    imagen.src = `./images/publicidad${numeroSlide + 1 }.jpg`
+                    imagen.src = `./images/publicidad${numeroSlide + 1}.jpg`
                 }
                 else if (numeroSlide === 5) {
                     numeroSlide = 0;
@@ -64,149 +64,160 @@ function repeticion() {
 
                     // con el numero buscar la imagen
                     let imagen = document.getElementById("imagen");
-                    imagen.src = `./images/publicidad${numeroSlide + 1 }.jpg`
+                    imagen.src = `./images/publicidad${numeroSlide + 1}.jpg`
                 }
-                
-                else if (numeroSlide < 5){
+
+                else if (numeroSlide < 5) {
                     // selecciono la siguiente slide
                     let slideSiguiente = slides[numeroSlide];
-                    
+
                     // llenar circulo
                     slideSiguiente.classList.add("active");
 
                     // con el numero buscar la imagen
                     let imagen = document.getElementById("imagen");
-                    imagen.src = `./images/publicidad${numeroSlide + 1 }.jpg`
+                    imagen.src = `./images/publicidad${numeroSlide + 1}.jpg`
                 }
 
 
 
-            }, (3000 * i)
+            }, (tiempo * i)
         );
     }
 }
-let j = 0;
-while (j < 3600) {
-    setTimeout(
-        () => {
-            repeticion();
-        }, 15000 * j
+let j = [];
+function auto(tiempo) {
+    while (j < 50) {
+        j.append(setTimeout(
+            () => {
+                repeticion(tiempo);
+            }, tiempo * 5 * j
+        ));
+        j++;
+    }
+}
+auto(4000);
+function reiniciar() {
+    j.map(
+        (item) => {
+            clearTimeout(item);
+        }
     );
-    j++;
+    auto(4000);
 }
 
-function flechas(flecha){
+function flechas(flecha) {
+    // reiniciar();
     let direccion = flecha.getAttribute("data-direccion");
-if(direccion == "izquierda"){
+    if (direccion == "izquierda") {
         // aqui tengo la slide actual
         let slideActual = document.querySelectorAll(".active");
 
         // con esto tengo el indice de la slide actual
-        let numeroSlide = parseInt(slideActual[0].getAttribute("data-slide-to"),10);
-    
+        let numeroSlide = parseInt(slideActual[0].getAttribute("data-slide-to"), 10);
+
         // remover el active de la slide actual
         slideActual[0].classList.remove("active");
-    
+
         // con esto tengo todas las slide
         let slides = document.querySelectorAll(".slide");
-    
-        
-    
+
+
+
         //alert("entro ")
         // si numeroSlide es 5 se reinicia el contador a cero sino le suma 1
-        if (numeroSlide === 1){
+        if (numeroSlide === 1) {
             numeroSlide = 4;
             // selecciono la siguiente slide
             let slideSiguiente = slides[numeroSlide];
-            
+
             // llenar circulo
             slideSiguiente.classList.add("active");
-    
+
             // con el numero buscar la imagen
             let imagen = document.getElementById("imagen");
-            imagen.src = `./images/publicidad${numeroSlide + 1 }.jpg`
+            imagen.src = `./images/publicidad${numeroSlide + 1}.jpg`
         }
         else if (numeroSlide === 5) {
-    
+
             // selecciono la siguiente slide
             let slideSiguiente = slides[numeroSlide - 2];
-    
+
             // llenar circulo
             slideSiguiente.classList.add("active");
-    
-            // con el numero buscar la imagen
-            let imagen = document.getElementById("imagen");
-            imagen.src = `./images/publicidad${numeroSlide - 1}.jpg`
-        }
-        
-        else if (numeroSlide < 5){
-            // selecciono la siguiente slide
-            let slideSiguiente = slides[numeroSlide - 2];
-            
-            // llenar circulo
-            slideSiguiente.classList.add("active");
-    
+
             // con el numero buscar la imagen
             let imagen = document.getElementById("imagen");
             imagen.src = `./images/publicidad${numeroSlide - 1}.jpg`
         }
 
-}
-else if(direccion == "derecha"){
-    // aqui tengo la slide actual
-    let slideActual = document.querySelectorAll(".active");
+        else if (numeroSlide < 5) {
+            // selecciono la siguiente slide
+            let slideSiguiente = slides[numeroSlide - 2];
 
-    // con esto tengo el indice de la slide actual
-    let numeroSlide = parseInt(slideActual[0].getAttribute("data-slide-to"),10);
+            // llenar circulo
+            slideSiguiente.classList.add("active");
 
-    // remover el active de la slide actual
-    slideActual[0].classList.remove("active");
+            // con el numero buscar la imagen
+            let imagen = document.getElementById("imagen");
+            imagen.src = `./images/publicidad${numeroSlide - 1}.jpg`
+        }
 
-    // con esto tengo todas las slide
-    let slides = document.querySelectorAll(".slide");
-
-    
-
-    //alert("entro ")
-    // si numeroSlide es 5 se reinicia el contador a cero sino le suma 1
-    if (numeroSlide === 1){
-        // selecciono la siguiente slide
-        let slideSiguiente = slides[numeroSlide];
-        
-        // llenar circulo
-        slideSiguiente.classList.add("active");
-
-        // con el numero buscar la imagen
-        let imagen = document.getElementById("imagen");
-        imagen.src = `./images/publicidad${numeroSlide + 1 }.jpg`
     }
-    else if (numeroSlide === 5) {
-        numeroSlide = 0;
+    else if (direccion == "derecha") {
+        // aqui tengo la slide actual
+        let slideActual = document.querySelectorAll(".active");
 
-        // selecciono la siguiente slide
-        let slideSiguiente = slides[numeroSlide];
+        // con esto tengo el indice de la slide actual
+        let numeroSlide = parseInt(slideActual[0].getAttribute("data-slide-to"), 10);
 
-        // llenar circulo
-        slideSiguiente.classList.add("active");
+        // remover el active de la slide actual
+        slideActual[0].classList.remove("active");
 
-        // con el numero buscar la imagen
-        let imagen = document.getElementById("imagen");
-        imagen.src = `./images/publicidad${numeroSlide + 1 }.jpg`
+        // con esto tengo todas las slide
+        let slides = document.querySelectorAll(".slide");
+
+
+
+        //alert("entro ")
+        // si numeroSlide es 5 se reinicia el contador a cero sino le suma 1
+        if (numeroSlide === 1) {
+            // selecciono la siguiente slide
+            let slideSiguiente = slides[numeroSlide];
+
+            // llenar circulo
+            slideSiguiente.classList.add("active");
+
+            // con el numero buscar la imagen
+            let imagen = document.getElementById("imagen");
+            imagen.src = `./images/publicidad${numeroSlide + 1}.jpg`
+        }
+        else if (numeroSlide === 5) {
+            numeroSlide = 0;
+
+            // selecciono la siguiente slide
+            let slideSiguiente = slides[numeroSlide];
+
+            // llenar circulo
+            slideSiguiente.classList.add("active");
+
+            // con el numero buscar la imagen
+            let imagen = document.getElementById("imagen");
+            imagen.src = `./images/publicidad${numeroSlide + 1}.jpg`
+        }
+
+        else if (numeroSlide < 5) {
+            // selecciono la siguiente slide
+            let slideSiguiente = slides[numeroSlide];
+
+            // llenar circulo
+            slideSiguiente.classList.add("active");
+
+            // con el numero buscar la imagen
+            let imagen = document.getElementById("imagen");
+            imagen.src = `./images/publicidad${numeroSlide + 1}.jpg`
+        }
     }
-    
-    else if (numeroSlide < 5){
-        // selecciono la siguiente slide
-        let slideSiguiente = slides[numeroSlide];
-        
-        // llenar circulo
-        slideSiguiente.classList.add("active");
-
-        // con el numero buscar la imagen
-        let imagen = document.getElementById("imagen");
-        imagen.src = `./images/publicidad${numeroSlide + 1 }.jpg`
-    }
-}    
-    
 }
 
 // let slideActual = document.querySelectorAll(".active");
